@@ -1,0 +1,50 @@
+﻿<Page x:Class="WpfApplication1.TinhLuong"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication1"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="TinhLuong" FontSize="20" Foreground="AliceBlue">
+
+    <StackPanel Margin="0,50,0,0" HorizontalAlignment="Center">
+        <TextBlock Text="Tính lương" FontSize="48" HorizontalAlignment="Center" />
+        <StackPanel Margin="0,20,0,0" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <TextBox x:Name="searchBox" Text="Nhập mã hoặc tên nhân viên" Width="300" GotFocus="TextBox_GotFocus">
+                    <TextBox.Foreground>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                    </TextBox.Foreground>
+                </TextBox>
+                <Button x:Name="SearchButton" Content="Tìm kiếm" Width="150" Click="SearchButton_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="Bang" Width="500"  Margin="0,20,0,0" HorizontalAlignment="Center" Visibility="Collapsed">
+                <StackPanel x:Name="ThongTin" IsHitTestVisible="False">
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock Text="Họ và tên" Width="120" />
+                        <TextBox x:Name="HoTenBox" Width="200" Margin="5,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock Text="Mã số " Width="120"/>
+                        <TextBox x:Name="MaSoBox" Width="200" Margin="5,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0" >
+                        <TextBlock Text="Năm sinh "  Width="120"/>
+                        <TextBox x:Name="NamSinhBox" Width="200" Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock Text="Ngày làm" Width="120"/>
+                        <TextBox x:Name="NgayLamBox" Width="200" Margin="5,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                        <TextBlock Text="Đơn vị lương " Width="120"/>
+                        <TextBox x:Name="DVLBox" Width="200" Margin="5,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+                <TextBlock x:Name="Luong" Text="Lương :" Foreground="Pink" Height="30" Margin="0,10,0,0"/>
+                <Button x:Name="LapHoaDon" Content="Reset và in hóa đơn" Width="200" Margin="0,20,0,0" Click="LapHoaDon_Click"/>
+            </StackPanel>
+        </StackPanel>        
+    </StackPanel>
+</Page>

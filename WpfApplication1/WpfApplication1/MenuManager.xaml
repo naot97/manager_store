@@ -1,0 +1,26 @@
+﻿<Page x:Class="WpfApplication1.MenuManager"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication1"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="MenuManager" Foreground="AliceBlue" FontSize="20">
+    <Grid>
+        <StackPanel Margin="0,50,0,0">
+            <TextBlock x:Name="Header" FontSize="48" Text="Menu Quản lí" HorizontalAlignment="Center"/>
+            <StackPanel Margin="0,50,0,0" Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel>
+                    <Button x:Name="TinhLuongButton" Content="Tính lương" Width="150" Click="TinhLuongButton_Click" />
+                    <Button x:Name="DiemDanhButton" Content="Điểm danh" Width="150" Margin="0,20,0,0" Click="DiemDanhButton_Click"/>
+                    <Button x:Name="SuaNVButton" Content="Chỉnh sửa NV"  Width="150" Margin="0,20,0,0" Click="SuaNVButton_Click"/>
+                </StackPanel>
+                <StackPanel Margin="50,0,0,0">
+                    <Button x:Name="SuaHangButton" Content="Chỉnh sửa hàng" Width="150"  Click="SuaHangButton_Click"/>
+                    <Button x:Name="DoiPassButton" Content="Thay đổi mật khẩu" Width="160" Margin="0,20,0,0" Click="DoiPassButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

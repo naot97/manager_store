@@ -1,0 +1,61 @@
+﻿<Page x:Class="WpfApplication1.ChinhSuaHang"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication1"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="300"
+      Title="ChinhSuaHang" Foreground="AliceBlue" FontSize="20">
+
+    <StackPanel Margin="0,50,0,0">
+        <TextBlock x:Name="Header" Text="Kho Hàng" HorizontalAlignment="Center" FontSize="48" />
+        <Grid Margin="0,20,0,0">
+            <StackPanel Width="500" x:Name="ChitietHang" >
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Text="Tên hàng" Width="120" />
+                    <TextBox x:Name="TenBox" Width="200" Margin="5,0,0,0"/>
+                </StackPanel >
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Mã hàng" Width="120" />
+                    <TextBox x:Name="MaBox" Width="200" Margin="5,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Loại" Width="120" />
+                    <TextBox x:Name="LoaiBox" Width="200" Margin="5,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Ảnh" Width="120" />
+                    <TextBox x:Name="SourceAnhBox" Width="200" Height="30" Margin="5,0,0,0" VerticalAlignment="Top"/>
+                    <Image x:Name="Anh" Width="100" Height="100" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Số lượng" Width="120" />
+                    <TextBox x:Name="SoLuongBox" Width="200" Margin="5,0,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Đơn giá" Width="120" />
+                    <TextBox x:Name="DonGiaBox" Width="200" Margin="5,0,0,0"/>
+                </StackPanel>
+                <StackPanel Margin="0,20,0,0" Orientation="Horizontal">
+                    <Button x:Name="SaveButton" Content="Lưu" Width="50" Click="SaveButton_Click" />
+                    <Button x:Name="XoaButton" Content="Xóa" Width="50" Click="XoaButton_Click"/>
+                </StackPanel>
+                </StackPanel>
+            <StackPanel HorizontalAlignment="Right" >
+                <Button x:Name="newButton" Content="Tạo mới" Width="100" HorizontalAlignment="Left" Click="newButton_Click"/>
+                <TextBox x:Name="SearchBox" 
+                         Text="Nhập mã hoặc tên tại đây" 
+                         Width="200" Margin="0,10,0,10" 
+                         FontStyle="Italic" 
+                         GotFocus="Search_GotFocus">
+                    <TextBox.Foreground>
+                        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                    </TextBox.Foreground>
+                </TextBox>
+                <Button x:Name="SreachButton" Content="Tìm kiếm" Width="100" HorizontalAlignment="Left" Click="SreachButton_Click"/>
+
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Page>
